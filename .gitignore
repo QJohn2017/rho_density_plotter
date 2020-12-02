@@ -1,5 +1,6 @@
+*.ipynb_checkpoints
+_pycache_
 *.ipynb
-*.eps
-*.svg
-__pycache__
-.ipynb_checkpoints
+/simOutput
+.vscode/
+__pycache__/
