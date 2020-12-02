@@ -2,9 +2,7 @@
 Density-field plotter plot the density and laser field in the same picture.
 The field includes the laser electric field in the laser polarization direction and longitudinal electric field along the simulation box.
 
-To run, `python rho_electric.py`. To generate the corresponding `jupyter notebook`, we use
-
-[`jupytext`](https://github.com/mwouts/jupytext). 
+To run, `python rho_electric.py`. To generate the corresponding `jupyter notebook`, we use [`jupytext`](https://github.com/mwouts/jupytext). 
 
 To generate a jupyter notebook from a Python script, do:
 
