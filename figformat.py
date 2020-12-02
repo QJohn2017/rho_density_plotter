@@ -23,7 +23,7 @@ def figure_format(fig_width, fig_height=None):
         fig_height = fig_width / golden_ratio
 
     fig_size = [fig_width, fig_height]
-    fontsize = 12
+    fontsize = 8
     linewidth = 1.0
     params = {
         "backend": "ps",
@@ -43,12 +43,12 @@ def figure_format(fig_width, fig_height=None):
         "xtick.major.size": linewidth * 3,
         "xtick.major.top": True,
         "xtick.major.width": linewidth / golden_ratio,
-        "xtick.minor.size": linewidth,
+        "xtick.minor.size": linewidth * golden_ratio,
         "xtick.minor.top": True,
         "xtick.minor.width": linewidth / golden_ratio,
         "ytick.major.size": linewidth * 3,
         "ytick.major.width": linewidth / golden_ratio,
-        "ytick.minor.size": linewidth,
+        "ytick.minor.size": linewidth * golden_ratio,
         "ytick.minor.width": linewidth / golden_ratio,
         "figure.figsize": fig_size,
         "pgf.texsystem": "pdflatex",
