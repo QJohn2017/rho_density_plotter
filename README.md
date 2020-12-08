@@ -19,3 +19,8 @@ $ sudo apt install dvipng texlive-latex-extra texlive-fonts-recommended cm-super
 ```
 
 ![alt text](laser_density.png)
+
+The script is developed for the generation of plots in the following publications:
+
+- J F Ong, K Seto, A C Berceanu, S Aogaki and L Neagu, Feasibility studies of an all-optical and compact γ-ray blaster using a 1 PW laser pulse, 2019 Plasma Phys. Control. Fusion 61 084009.
+- I Tazes, J F Ong, O Tesileanu, K A Tanaka, N A Papadogiannis, M Tatarakis and V Dimitriou, Target normal sheath acceleration and laser wakefield acceleration particle-in-cell simulations performance on CPU & GPU architectures for high-power laser systems, 2020 Plasma Phys. Control. Fusion 62 094005.
