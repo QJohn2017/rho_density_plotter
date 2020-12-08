@@ -32,18 +32,18 @@ n_c = laser.ncrit.to_value("1/m**3")
 E0 = (laser.E0 / a0).to_value("volt/m")
 # 4013376052599.5396
 
-p = "/media/ong/WORKDIR2/betatron0014/simOutput/h5"
+p = "/media/ong/WORKDIR2/betatron0009_03/simOutput/h5"
 ts = addons.LpaDiagnostics(p)
-
+iteration = 108500
 rho, rho_info = ts.get_field(
     field="e_density",
-    iteration=50000,
+    iteration=iteration,
     slice_across="z",
 )
 electric, electric_info = ts.get_field(
     field="E",
     coord="z",
-    iteration=50000,
+    iteration=iteration,
     slice_across="z",
 )
 # get laser envelope
@@ -55,7 +55,7 @@ envelope = np.abs(e_complx)
 e_y_of_y, e_y_of_y_info = ts.get_field(
     field="E",
     coord="y",
-    iteration=50000,
+    iteration=iteration,
     slice_across=["z", "x"],
 )
 
@@ -122,7 +122,7 @@ ax.set_xlabel("$y \;(\mu \mathrm{m} )$")
 ax.minorticks_on()
 
 fig.savefig(
-    "laser_density.png",
+    f"{p}/laser_density_{iteration}.png",
     dpi=600,
     transparent=False,
     bbox_inches="tight",
