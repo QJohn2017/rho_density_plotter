@@ -23,36 +23,39 @@ def figure_format(fig_width, fig_height=None):
         fig_height = fig_width / golden_ratio
 
     fig_size = [fig_width, fig_height]
-    fontsize = 8
-    linewidth = 1.0
+    fontsize = 7
+    linewidth = 0.5
     params = {
         "backend": "ps",
         "axes.labelsize": fontsize,
         "axes.titlesize": fontsize,
+        "axes.linewidth": linewidth,
         "font.size": fontsize,
+        "font.family": "serif",
         "legend.frameon": False,
         "legend.fontsize": fontsize,
         "legend.loc": "best",
         "lines.linewidth": linewidth,
+        #
         "xtick.labelsize": fontsize,
-        "ytick.labelsize": fontsize,
         "xtick.direction": "in",
-        "ytick.direction": "in",
         "xtick.top": True,
-        "ytick.right": True,
-        "xtick.major.size": linewidth * 3,
+        "xtick.major.size": 2.4,
         "xtick.major.top": True,
-        "xtick.major.width": linewidth / golden_ratio,
-        "xtick.minor.size": linewidth * golden_ratio,
+        "xtick.major.width": 0.3,
+        "xtick.minor.size": 1.2,
         "xtick.minor.top": True,
-        "xtick.minor.width": linewidth / golden_ratio,
-        "ytick.major.size": linewidth * 3,
-        "ytick.major.width": linewidth / golden_ratio,
-        "ytick.minor.size": linewidth * golden_ratio,
-        "ytick.minor.width": linewidth / golden_ratio,
+        "xtick.minor.width": 0.3,
+        #
+        "ytick.labelsize": fontsize,  
+        "ytick.direction": "in",        
+        "ytick.right": True,
+        "ytick.major.size": 2.4,
+        "ytick.major.width": 0.3,
+        "ytick.minor.size": 1.2,
+        "ytick.minor.width": 0.3,
         "figure.figsize": fig_size,
         "pgf.texsystem": "pdflatex",
-        "font.family": "serif",
         "text.usetex": True,
         "pgf.rcfonts": False,
         "ps.usedistiller": "xpdf",

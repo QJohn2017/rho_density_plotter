@@ -32,9 +32,9 @@ n_c = laser.ncrit.to_value("1/m**3")
 E0 = (laser.E0 / a0).to_value("volt/m")
 # 4013376052599.5396
 
-p = "/media/ong/WORKDIR2/betatron0009_03/simOutput/h5"
+p = "/media/ong/WORKDIR2/betatron0017/simOutput/h5"
 ts = addons.LpaDiagnostics(p)
-iteration = 108500
+iteration = 50000
 rho, rho_info = ts.get_field(
     field="e_density",
     iteration=iteration,
@@ -79,9 +79,9 @@ im_envelope = ax.imshow(
 im_envelope.set_clim(vmin=1.0)
 
 # plot longitudinal field
-ax.plot(e_y_of_y_info.y * 1e6, e_y_of_y / E0 * 25 + 10, color="0.75")
+ax.plot(e_y_of_y_info.y * 1e6, e_y_of_y / E0 * 25 + 10, color="0.7")
 ax.axhline(10, color="0.85", ls="-.")
-
+# print(np.max(e_y_of_y / E0)) 1 tick mark correspond to 1/25*(one tick mark value of x axis)
 cbaxes_rho = inset_axes(
     ax,
     width="3%",  # width = 10% of parent_bbox width
@@ -113,7 +113,7 @@ cbar_env.ax.minorticks_on()
 cbar_rho.ax.minorticks_on()
 # add watermark
 ax.text(0.5, 0.5, 'LGED preliminary', transform=ax.transAxes,
-    fontsize=20, color='0.7', alpha=0.5,
+    fontsize=20, color='0.75', alpha=0.5,
     ha='center', va='center', rotation='30')
     
 # Add the name of the axes
@@ -122,7 +122,7 @@ ax.set_xlabel("$y \;(\mu \mathrm{m} )$")
 ax.minorticks_on()
 
 fig.savefig(
-    f"{p}/laser_density_{iteration}.png",
+    f"laser_density_{iteration}.png",
     dpi=600,
     transparent=False,
     bbox_inches="tight",
